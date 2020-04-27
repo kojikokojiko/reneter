@@ -19,4 +19,6 @@ from django.urls import path,include
 urlpatterns = [
     path('talking', include('talking.urls')),
     path('admin/', admin.site.urls),
+    # accountsが続いていた場合に用意していたviewを呼び出す
+    path('accounts/', include('django.contrib.auth.urls')),
 ]
