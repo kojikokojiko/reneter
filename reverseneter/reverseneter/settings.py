@@ -55,7 +55,8 @@ ROOT_URLCONF = 'reverseneter.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        #プロジェクト共通のtemplatesディレクトリを指定
+        'DIRS': [os.path.join(BASE_DIR,'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -70,6 +71,9 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'reverseneter.wsgi.application'
 
+
+# ログインした後に移動するページを指定
+LOGIN_REDIRECT_URL = '/'
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
