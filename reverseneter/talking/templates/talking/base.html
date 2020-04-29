@@ -1,20 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 
 <head>
-    <meta charset='utf-8'>
-    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
-    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' &gt; <style>body
-    {padding-top: 80px;}</style>
-    <title>Lunchmap</title>
+    <meta charset="UTF-8">
+    {% load static %}
+    {% load bootstrap4 %}
+    {% bootstrap_css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'carbike/css/style.css' %}">
+    {% bootstrap_javascript jquery='full' %}
+    <title>逆ネーター </title>
 </head>
 
 <body>
-    <nav class='navbar navbar-expand-sm navbar-dark bg-dark fixed-top'>
-        <a class='navbar-brand' href='{% url "talking:index" %}'>reneter</a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">逆ネーター</a>
     </nav>
-    <div class='container'>
-        {% block content %}
+    <div class="container">
+        {%block content %}
         {% endblock %}
     </div>
 </body>
