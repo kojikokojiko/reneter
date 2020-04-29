@@ -4,5 +4,5 @@ from django.http import HttpResponse
 
 
 def index(request):
-    context={'air':''}
+    
     return render(request,'talking/index.html',context)
