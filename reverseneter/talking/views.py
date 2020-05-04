@@ -6,3 +6,11 @@ from django.http import HttpResponse
 def index(request):
     
     return render(request,'talking/index.html')
+
+
+def neter(request):
+    return render(request,'talking/neter.html')
+
+
+def theme(request):
+    return render(request,'talking/theme.html')
