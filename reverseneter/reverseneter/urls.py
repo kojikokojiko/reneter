@@ -16,8 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 
+# 第一引数の後に/を追加するのを忘れないように
+
 urlpatterns = [
-    path('talking', include('talking.urls')),
+    path('talking/', include('talking.urls')),
     path('admin/', admin.site.urls),
     # accountsが続いていた場合に用意していたviewを呼び出す
     path('accounts/', include('django.contrib.auth.urls')),
